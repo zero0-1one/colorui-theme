@@ -25,8 +25,10 @@ cutheme ./config.json
 
 ## 配置文件
 
+可以为 `.js` 或 `.json` 文件
+
 ```js
-//config.json
+//config.js
 {
   // 指定 colorui 中 main.css 所在的目录
   src:'~/colorui',
@@ -36,7 +38,8 @@ cutheme ./config.json
   // src下的main.css 会导出一份到 dest中,如果指定newColors会在文件末尾追加新的颜色规则
   // 默认 'main-new.css'
   fileName:'main-new.css',
-
+  //需要从 src 目录拷贝到 dest 的文件, 默认包含: icon.css, animation.css
+  copyFiles:['icon.css', 'animation.css'],
   //指定需要添加的新颜色
   newColors:[{
     name:'newblue', //新颜色的名字

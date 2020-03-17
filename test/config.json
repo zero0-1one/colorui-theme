@@ -2,6 +2,7 @@
   "src": "./test",
   "dest": "./test/css/bin",
   "fileName": "",
+  "copyFiles":["cfg.js"],
   "newColors": [
     {
       "name": "bule2",
