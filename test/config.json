@@ -26,6 +26,7 @@
       }
     }
   ],
+  "themesFileName": "themes.css",
   "lite": {
     "fileName": "main-lite.css",
     "modules": [

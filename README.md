@@ -1,7 +1,7 @@
 # colorui-theme
 
 这个是从`ColorUi`生成不同颜色主题的工具.  
-`ColorUi`是款优秀的css框架, 在此非常感谢 weilanwl 将它开源.  
+`ColorUi`是款优秀的 css 框架, 在此非常感谢 weilanwl 将它开源.  
 关于`ColorUi`更多信息,请前往 <https://github.com/weilanwl/ColorUI> 或 <https://www.color-ui.com>
 
 ## 功能
@@ -37,7 +37,7 @@ cutheme ./config.json
   dest:'~/projectDir/css',
 
   // src下的main.css 会导出一份到 dest中,如果指定 newColors 会在文件末尾追加新的颜色规则
-  // 如果 fileName 为空, 则不会导出文件,
+  // 如果 fileName === false 则不会导出该文件, 其他空值默认 'main-new.css'
   fileName:'main-new.css',
   //需要从 src 目录拷贝到 dest 的文件, 默认包含: icon.css, animation.css
   copyFiles:['icon.css', 'animation.css'],
@@ -57,7 +57,7 @@ cutheme ./config.json
   themes:[{
     //主题名称 默认:'default'
     name:'default',
-    //导出的主题文件名默认 `theme-${name}.css`
+    // 如果 fileName === false 则不会导出该文件, 其他空值默认`theme-${name}.css`
     fileName:'cutheme-default.css',
     //每个选择器追加的命名空间, 默认为`.theme-${name} ` 注意:通常后面有空格
     namespace:'theme-default',
@@ -71,9 +71,13 @@ cutheme ./config.json
   //... 更多主题
   ],
 
+  // 合并所有 theme 文件到 themesFileName
+  // 如果 themesFileName === false 则不会导出该文件, 其他空值默认 'themes.css'
+  themesFileName:'theme.css',
+
    //根据指定模块来导出 css
   lite:{
-    //导出的文件名默认 `main-lite.css`
+    // 如果 fileName === false 则不会导出该文件, 其他空值默认 `main-lite.css`
     fileName:'main-lite.css',
 
     //自带模块
