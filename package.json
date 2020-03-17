@@ -1,0 +1,35 @@
+{
+  "name": "colorui-theme",
+  "version": "1.0.0",
+  "description": "这个从 ColorUi 生成不同颜色主题的工具",
+  "main": "index.js",
+  "bin": {
+    "cutheme": "bin/cutheme.js"
+  },
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --timeout=10000 --slow=5000 test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero0-1one/colorui-theme.git"
+  },
+  "keywords": [
+    "colorui",
+    "theme"
+  ],
+  "author": "zero0-1one",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zero0-1one/colorui-theme/issues"
+  },
+  "homepage": "https://github.com/zero0-1one/colorui-theme#readme",
+  "dependencies": {
+    "commander": "^5.0.0",
+    "postcss": "^7.0.27",
+    "uncss": "^0.17.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}

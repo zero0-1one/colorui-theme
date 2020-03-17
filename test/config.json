@@ -1,0 +1,43 @@
+{
+  "src": "./test",
+  "dest": "./test/css/bin",
+  "fileName": "",
+  "newColors": [
+    {
+      "name": "bule2",
+      "main": "#0081ff",
+      "inverse": "#ffffff",
+      "light": "#cce6ff",
+      "shadow": "rgba(0, 102, 204, 0.2);",
+      "gradual": "#1cbbb4",
+      "lightInverse": "#0081ff"
+    }
+  ],
+  "themes": [
+    {
+      "name": "default",
+      "fileName": "",
+      "namespace": "",
+      "colorMap": {
+        "activated": "blue",
+        "disabled": "grey",
+        "newColor": "blue2"
+      }
+    }
+  ],
+  "lite": {
+    "fileName": "main-lite.css",
+    "modules": [
+      "color"
+    ],
+    "isRemove": true
+  },
+  "uncss": {
+    "projectDir": "",
+    "fileFilter": [
+      ".html",
+      ".vue"
+    ],
+    "liteName": ""
+  }
+}
