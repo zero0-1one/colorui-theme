@@ -73,7 +73,7 @@ cutheme ./config.json
 
   // 合并所有 theme 文件到 themesFileName
   // 如果 themesFileName === false 则不会导出该文件, 其他空值默认 'themes.css'
-  themesFileName:'theme.css',
+  themesFileName:'themes.css',
 
    //根据指定模块来导出 css
   lite:{
