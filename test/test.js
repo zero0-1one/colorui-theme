@@ -196,7 +196,7 @@ describe('postcss-colorui-theme', function () {
     let opts = {
       theme: 'newColor',
       newColor: { //定义新颜色
-        blue2: {
+        newblue: {
           main: '#0081ff',
           inverse: '#ffffff',
           light: '#cce6ff',
@@ -204,7 +204,7 @@ describe('postcss-colorui-theme', function () {
           gradual: '#1cbbb4',
         }
       },
-      colorMap: { 'activated': 'blue2' }
+      colorMap: { 'activated': 'newblue' }
     }
     let cuCss = fs.readFileSync(path.join(__dirname, 'main.css'))
     let result = await postcss([postcssTheme(opts)]).process(cuCss, { from: undefined })
@@ -243,7 +243,7 @@ describe('lib', function () {
         fileName: '', //导出的文件名默认 `theme-${theme.name}.css`
         namespace: '', //每个选择器追加的命名空间, 默认未 `.theme-${theme.name} ` 注意:通常后面有空格
         newColor: { //定义新颜色
-          blue2: {
+          newblue: {
             main: '#0081ff',
             inverse: '#ffffff',
             light: '#cce6ff',
@@ -255,7 +255,7 @@ describe('lib', function () {
         colorMap: {//指定主题中每种元素映射 colorui 中颜
           'activated': 'blue',
           'disabled': 'grey',
-          'newColor': 'blue2',
+          'newColor': 'newblue',
         },
       }
     })
