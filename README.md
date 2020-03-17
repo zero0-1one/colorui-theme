@@ -1,6 +1,6 @@
 # colorui-theme
 
-这个从`ColorUi`生成不同颜色主题的工具.  
+这个是从`ColorUi`生成不同颜色主题的工具.  
 关于`ColorUi`请查 <https://github.com/weilanwl/ColorUI> 或 <https://www.color-ui.com>
 
 ## 功能
