@@ -35,8 +35,8 @@ cutheme ./config.json
   // 指定生成文件保存的目录
   dest:'~/projectDir/css',
 
-  // src下的main.css 会导出一份到 dest中,如果指定newColors会在文件末尾追加新的颜色规则
-  // 默认 'main-new.css'
+  // src下的main.css 会导出一份到 dest中,如果指定 newColors 会在文件末尾追加新的颜色规则
+  // 如果 fileName 为空, 则不会导出文件,
   fileName:'main-new.css',
   //需要从 src 目录拷贝到 dest 的文件, 默认包含: icon.css, animation.css
   copyFiles:['icon.css', 'animation.css'],
