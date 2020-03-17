@@ -1,7 +1,8 @@
 # colorui-theme
 
 这个是从`ColorUi`生成不同颜色主题的工具.  
-关于`ColorUi`请查 <https://github.com/weilanwl/ColorUI> 或 <https://www.color-ui.com>
+`ColorUi`是款优秀的css框架, 在此非常感谢 weilanwl 将它开源.  
+关于`ColorUi`更多信息,请前往 <https://github.com/weilanwl/ColorUI> 或 <https://www.color-ui.com>
 
 ## 功能
 
