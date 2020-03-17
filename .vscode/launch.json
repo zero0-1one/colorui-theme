@@ -29,7 +29,7 @@
       "name": "启动程序",
       "args": [
         "-c",
-        "${workspaceFolder}\\test\\config"
+        "./test/config"
       ],
       "skipFiles": [
         "<node_internals>/**"
