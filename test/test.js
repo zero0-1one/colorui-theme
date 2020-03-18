@@ -286,6 +286,10 @@ describe('lib', function () {
       }
     })
   })
+
+  it('doAll', async function () {
+    await cutheme.doAll(require('./config.json'))
+  })
 })
 
 

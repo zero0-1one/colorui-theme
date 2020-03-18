@@ -3,6 +3,7 @@
   "dest": "./test/css/bin",
   "fileName": "main.css",
   "copyFiles": "",
+  "addHoverRules": true,
   "newColors": [
     {
       "name": "newblue",

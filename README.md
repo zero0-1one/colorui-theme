@@ -50,6 +50,8 @@ cutheme ./config.json
     shadow: 'rgba(0, 102, 204, 0.2);',//阴影色
     gradual: '#1cbbb4',//渐变色
     lightInverse:'#0081ff', //亮色的反色, 默认与 main 相同
+    hover:'',//默认通过计算 main 加深
+    lightHover:'',//默认通过计算 light 加深
   }],
 
 
@@ -61,6 +63,8 @@ cutheme ./config.json
     // 颜色值
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
     jsonFileName: false,
+    //是否追加 hover 规则
+    addHoverRules:true,
     themes:[{
       //主题名称 默认:'default'
       name:'default',
