@@ -41,6 +41,8 @@ cutheme ./config.json
   fileName:'main-new.css',
   //需要从 src 目录拷贝到 dest 的文件, 默认包含: icon.css, animation.css
   copyFiles:['icon.css', 'animation.css'],
+  //是否追加 hover 规则
+  addHoverRules:true,
   //指定需要添加的新颜色
   newColors:[{
     name:'newblue', //新颜色的名字
@@ -63,8 +65,6 @@ cutheme ./config.json
     // 颜色值
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
     jsonFileName: false,
-    //是否追加 hover 规则
-    addHoverRules:true,
     themes:[{
       //主题名称 默认:'default'
       name:'default',
