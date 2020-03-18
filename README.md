@@ -59,13 +59,15 @@ cutheme ./config.json
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.css'
     fileName:'themes.css',
     // 颜色值
-    // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.json'
+    // 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
     jsonFileName: false,
     themes:[{
       //主题名称 默认:'default'
       name:'default',
       // 如果 fileName === false 则不会导出该文件, 其他空值默认`theme-${name}.css`
       fileName:'cutheme-default.css',
+      // 如果 fileName === false 则不会导出该文件, 其他空值默认 `${name}-colors.json`
+      jsonFileName: false,
       //每个选择器追加的命名空间, 默认为`.theme-${name} ` 注意:通常后面有空格
       namespace:'.theme-default ',
       //指定主题中每种元素映射 colorui 中颜, 也可指定 newColors 中的颜色
