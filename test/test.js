@@ -186,7 +186,9 @@ describe('postcss-code-snippets', function () {
   it('copy one', async function () {
     let opts = { filePath: "", prefix: 'pre-' }
     let result = await postcss([postcssCodeSnippets(opts)]).process(css1, { from: undefined })
-    expect(result.codeSnippets).to.have.all.keys('pre-a', 'pre-abc', 'pre-b', 'pre-c', 'pre-bd')
+    let prefix = Object.keys(result.codeSnippets).map(k => result.codeSnippets[k].prefix).sort()
+    expect(prefix).to.deep.equal(['pre-a', 'pre-abc', 'pre-b', 'pre-c', 'pre-bd'].sort())
+    expect(result.codeSnippets).to.have.all.keys('a', 'abc', 'b', 'c', 'bd')
   })
 })
 
@@ -250,24 +252,26 @@ describe('lib', function () {
 
       //多主题配置
       themes: {
-        name: 'test', //主题名称 默认:'default',
-        fileName: '', //导出的文件名默认 `theme-${theme.name}.css`
-        namespace: '', //每个选择器追加的命名空间, 默认未 `.theme-${theme.name} ` 注意:通常后面有空格
-        newColor: { //定义新颜色
-          newblue: {
-            main: '#0081ff',
-            inverse: '#ffffff',
-            light: '#cce6ff',
-            shadow: 'rgba(0, 102, 204, 0.2);',
-            gradual: '#1cbbb4',
-            lightInverse: '#0081ff', //可不填, 默认与 main 相同
-          }
-        },
-        colorMap: {//指定主题中每种元素映射 colorui 中颜
-          'activated': 'blue',
-          'disabled': 'grey',
-          'newColor': 'newblue',
-        },
+        themes: [{
+          name: 'test', //主题名称 默认:'default',
+          fileName: '', //导出的文件名默认 `theme-${theme.name}.css`
+          namespace: '', //每个选择器追加的命名空间, 默认未 `.theme-${theme.name} ` 注意:通常后面有空格
+          newColor: { //定义新颜色
+            newblue: {
+              main: '#0081ff',
+              inverse: '#ffffff',
+              light: '#cce6ff',
+              shadow: 'rgba(0, 102, 204, 0.2);',
+              gradual: '#1cbbb4',
+              lightInverse: '#0081ff', //可不填, 默认与 main 相同
+            }
+          },
+          colorMap: {//指定主题中每种元素映射 colorui 中颜
+            'activated': 'blue',
+            'disabled': 'grey',
+            'newColor': 'newblue',
+          },
+        }]
       }
     })
   })

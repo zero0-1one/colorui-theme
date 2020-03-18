@@ -54,26 +54,31 @@ cutheme ./config.json
 
 
   //多主题配置
-  themes:[{
-    //主题名称 默认:'default'
-    name:'default',
-    // 如果 fileName === false 则不会导出该文件, 其他空值默认`theme-${name}.css`
-    fileName:'cutheme-default.css',
-    //每个选择器追加的命名空间, 默认为`.theme-${name} ` 注意:通常后面有空格
-    namespace:'theme-default',
-    //指定主题中每种元素映射 colorui 中颜, 也可指定 newColors 中的颜色
-    colorMap:{
-      '${name}':'blue',
-      'disabled':'grey',
-      'newColor':'newblue',//newColors 中的颜色
+  themes:{
+    // 合并所有 theme 文件到 themesFileName
+    // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.css'
+    fileName:'themes.css',
+    // 颜色值
+    // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.json'
+    jsonFileName: false,
+    themes:[{
+      //主题名称 默认:'default'
+      name:'default',
+      // 如果 fileName === false 则不会导出该文件, 其他空值默认`theme-${name}.css`
+      fileName:'cutheme-default.css',
+      //每个选择器追加的命名空间, 默认为`.theme-${name} ` 注意:通常后面有空格
+      namespace:'.theme-default ',
+      //指定主题中每种元素映射 colorui 中颜, 也可指定 newColors 中的颜色
+      colorMap:{
+        '${name}':'blue',
+        'disabled':'grey',
+        'newColor':'newblue',//newColors 中的颜色
+      },
     },
+    //... 更多主题
+    ],
   },
-  //... 更多主题
-  ],
 
-  // 合并所有 theme 文件到 themesFileName
-  // 如果 themesFileName === false 则不会导出该文件, 其他空值默认 'themes.css'
-  themesFileName:'themes.css',
 
    //根据指定模块来导出 css
   lite:{

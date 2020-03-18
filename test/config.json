@@ -5,7 +5,7 @@
   "copyFiles": "",
   "newColors": [
     {
-      "name": "bule2",
+      "name": "newblue",
       "main": "#0081ff",
       "inverse": "#ffffff",
       "light": "#cce6ff",
@@ -14,19 +14,22 @@
       "lightInverse": "#0081ff"
     }
   ],
-  "themes": [
-    {
-      "name": "default",
-      "fileName": "",
-      "namespace": "",
-      "colorMap": {
-        "activated": "blue",
-        "disabled": "grey",
-        "newColor": "newblue"
+  "themes": {
+    "fileName": "themes.css",
+    "jsonFileName": "colors.json",
+    "themes": [
+      {
+        "name": "default",
+        "fileName": "",
+        "namespace": "",
+        "colorMap": {
+          "activated": "blue",
+          "disabled": "grey",
+          "newColor": "newblue"
+        }
       }
-    }
-  ],
-  "themesFileName": "themes.css",
+    ]
+  },
   "codeSnippets": {
     "prefix": "cu-"
   },
