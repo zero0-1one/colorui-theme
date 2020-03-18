@@ -27,6 +27,9 @@
     }
   ],
   "themesFileName": "themes.css",
+  "codeSnippets": {
+    "prefix": "cu-"
+  },
   "lite": {
     "fileName": "main-lite.css",
     "modules": [

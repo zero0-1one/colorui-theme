@@ -4,6 +4,7 @@ const postcssFilterRules = require('../lib/postcss-filter-rules')
 const postcssCopy = require('../lib/postcss-copy')
 const postcssTheme = require('../lib/postcss-colorui-theme')
 const postcssLite = require('../lib/postcss-colorui-lite')
+const postcssCodeSnippets = require('../lib/postcss-code-snippets')
 const cutheme = require('../lib/cutheme')
 const fs = require('fs')
 const path = require('path')
@@ -176,6 +177,16 @@ describe('postcss-copy', function () {
     let result = await postcss([postcssCopy(opts)]).process(css1, { from: undefined })
     expect(result.css).equal(css1_copy_ab2abb_prefix)
     expect(result.warnings().length).equal(0)
+  })
+})
+
+
+
+describe('postcss-code-snippets', function () {
+  it('copy one', async function () {
+    let opts = { filePath: "", prefix: 'pre-' }
+    let result = await postcss([postcssCodeSnippets(opts)]).process(css1, { from: undefined })
+    expect(result.codeSnippets).to.have.all.keys('pre-a', 'pre-abc', 'pre-b', 'pre-c', 'pre-bd')
   })
 })
 
