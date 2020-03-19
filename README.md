@@ -62,8 +62,7 @@ cutheme ./config.json
     // 合并所有 theme 文件到 themesFileName
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.css'
     fileName:'themes.css',
-    // 颜色值
-    // 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
+    //颜色值 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
     jsonFileName: false,
     themes:[{
       //主题名称 默认:'default'
@@ -76,7 +75,7 @@ cutheme ./config.json
       namespace:'.theme-default ',
       //指定主题中每种元素映射 colorui 中颜, 也可指定 newColors 中的颜色
       colorMap:{
-        '${name}':'blue',
+        'activated':'blue',
         'disabled':'grey',
         'newColor':'newblue',//newColors 中的颜色
       },
@@ -90,15 +89,14 @@ cutheme ./config.json
   lite:{
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 `main-lite.css`
     fileName:'main-lite.css',
-
+   //指定的modules 是删除 还是保留模式, 默认删除模式
+    isRemove:true
     //自带模块
     modules:[
-      'colors',
-      'chat',
+      'color', //删除 color 模块
+      '^color-red', //保留 color-red. 子模块可以使用 ^ 运算符合
+      'chat',//删除 chat 模块
     ],
-
-    //指定的modules 是删除 还是保留模式, 默认删除模式
-    isRemove:true
   }
 }
 ```

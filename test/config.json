@@ -18,6 +18,7 @@
   "themes": {
     "fileName": "themes.css",
     "jsonFileName": "colors.json",
+    "scssFileName": "colors.scss",
     "themes": [
       {
         "name": "default",
@@ -37,7 +38,8 @@
   "lite": {
     "fileName": "main-lite.css",
     "modules": [
-      "color"
+      "color",
+      "^color-red"
     ],
     "isRemove": true
   },
