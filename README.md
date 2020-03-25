@@ -50,7 +50,7 @@ cutheme ./config.json
     inverse: '#ffffff',  //反色
     light: '#cce6ff',   //亮色
     shadow: 'rgba(0, 102, 204, 0.2);',//阴影色
-    gradual: '#1cbbb4',//渐变色
+    gradual: '#1cbbb4',//渐变色 也可以指定两个颜色 如: ['#0081ff', '#1cbbb4']
     lightInverse:'#0081ff', //亮色的反色, 默认与 main 相同
     hover:'',//默认通过计算 main 加深
     lightHover:'',//默认通过计算 light 加深
@@ -59,7 +59,7 @@ cutheme ./config.json
 
   //多主题配置
   themes:{
-    // 合并所有 theme 文件到 themesFileName
+    // 合并所有 theme 文件到同一个文件
     // 如果 fileName === false 则不会导出该文件, 其他空值默认 'themes.css'
     fileName:'themes.css',
     //颜色值 如果 fileName === false 则不会导出该文件, 其他空值默认 'colors.json'
