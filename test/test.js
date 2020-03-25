@@ -182,15 +182,15 @@ describe('postcss-copy', function () {
 
 
 
-describe('postcss-code-snippets', function () {
-  it('copy one', async function () {
-    let opts = { filePath: "", prefix: 'pre-' }
-    let result = await postcss([postcssCodeSnippets(opts)]).process(css1, { from: undefined })
-    let prefix = Object.keys(result.codeSnippets).map(k => result.codeSnippets[k].prefix).sort()
-    expect(prefix).to.deep.equal(['pre-a', 'pre-abc', 'pre-b', 'pre-c', 'pre-bd'].sort())
-    expect(result.codeSnippets).to.have.all.keys('a', 'abc', 'b', 'c', 'bd')
-  })
-})
+// describe('postcss-code-snippets', function () {
+//   it('copy one', async function () {
+//     let opts = { filePath: "", prefix: 'pre-' }
+//     let result = await postcss([postcssCodeSnippets(opts)]).process(css1, { from: undefined })
+//     let prefix = Object.keys(result.codeSnippets).map(k => result.codeSnippets[k].prefix).sort()
+//     expect(prefix).to.deep.equal(['pre-a', 'pre-abc', 'pre-b', 'pre-c', 'pre-bd'].sort())
+//     expect(result.codeSnippets).to.have.all.keys('a', 'abc', 'b', 'c', 'bd')
+//   })
+// })
 
 
 describe('postcss-colorui-theme', function () {
