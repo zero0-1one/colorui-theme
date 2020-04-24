@@ -1,6 +1,6 @@
 {
   "name": "colorui-theme",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "这个从 ColorUi 生成不同颜色主题的工具",
   "main": "index.js",
   "bin": {
