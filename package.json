@@ -25,7 +25,7 @@
   "homepage": "https://github.com/zero0-1one/colorui-theme#readme",
   "dependencies": {
     "commander": "^5.0.0",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "uncss": "^0.17.3"
   },
   "devDependencies": {
